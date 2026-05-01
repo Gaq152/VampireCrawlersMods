@@ -1,0 +1,91 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="GameDir.props" Condition="Exists('GameDir.props')" />
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <AssemblyName>EvoTrackerMod</AssemblyName>
+    <Description>Evolution recipe tracker for Vampire Crawlers</Description>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <BepInExDir>$(GameDir)\BepInEx</BepInExDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- BepInEx Core -->
+    <Reference Include="BepInEx.Core">
+      <HintPath>$(BepInExDir)\core\BepInEx.Core.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="BepInEx.Unity.IL2CPP">
+      <HintPath>$(BepInExDir)\core\BepInEx.Unity.IL2CPP.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>$(BepInExDir)\core\0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Il2CppInterop.Runtime">
+      <HintPath>$(BepInExDir)\core\Il2CppInterop.Runtime.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+
+    <!-- Unity Engine -->
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(BepInExDir)\interop\UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>$(BepInExDir)\interop\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Il2Cppmscorlib">
+      <HintPath>$(BepInExDir)\interop\Il2Cppmscorlib.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+
+    <!-- Unity Modules -->
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>$(BepInExDir)\interop\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+
+    <!-- Sirenix (Odin Inspector dependency) -->
+    <Reference Include="Sirenix.Serialization">
+      <HintPath>$(BepInExDir)\interop\Sirenix.Serialization.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Sirenix.OdinInspector.Attributes">
+      <HintPath>$(BepInExDir)\interop\Sirenix.OdinInspector.Attributes.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Sirenix.Utilities">
+      <HintPath>$(BepInExDir)\interop\Sirenix.Utilities.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+
+    <!-- Localization -->
+    <Reference Include="Unity.Localization">
+      <HintPath>$(BepInExDir)\interop\Unity.Localization.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Unity.ResourceManager">
+      <HintPath>$(BepInExDir)\interop\Unity.ResourceManager.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>$(BepInExDir)\interop\UnityEngine.UIElementsModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+
+    <!-- Game Assemblies -->
+    <Reference Include="Pancake">
+      <HintPath>$(BepInExDir)\interop\Pancake.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+</Project>

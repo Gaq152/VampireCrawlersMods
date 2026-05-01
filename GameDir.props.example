@@ -1,0 +1,7 @@
+<Project>
+  <PropertyGroup>
+    <!-- 设置你的游戏安装目录（包含 BepInEx/ 子目录的那个路径） -->
+    <!-- 如果没有安装游戏，可以指向存放 BepInEx 运行时 DLL 的目录 -->
+    <GameDir>D:\steam\steamapps\common\Vampire Crawlers</GameDir>
+  </PropertyGroup>
+</Project>

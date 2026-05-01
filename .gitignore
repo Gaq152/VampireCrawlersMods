@@ -1,0 +1,13 @@
+# BepInEx 运行时（由框架安装生成，非源码）
+BepInEx/
+
+# 构建产物
+bin/
+obj/
+
+# IDE / 工具
+.claude/
+.vs/
+*.user
+*.suo
+GameDir.props
